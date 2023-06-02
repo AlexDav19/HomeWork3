@@ -86,12 +86,15 @@ public class Main {
     }
     public static void task7(){
         System.out.println("Задание 7");
-        short diet1 = 7 * 1000 / 250;
-        short diet2 = 7 * 1000 / 500;
-        short average = (short) ((diet1 + diet2) / 2);
+        short weightMin = 250;
+        short weightMax = 500;
+        float averageWeight = (weightMin + weightMax) / 2f;
+        short diet1 = (short) (7 * 1000 / weightMin);
+        short diet2 = (short) (7 * 1000 / weightMax);
+        float average = 7 * 1000 / averageWeight;
         System.out.println("Потребуется " + diet1 + " дней теряя 250гр в день.");
         System.out.println("Потребуется " + diet2 + " дней теряя 500гр в день.");
-        System.out.println("В среднем уйдет " + average + " день.");
+        System.out.printf("В среднем уйдет %.2f дней%n", average);
     }
     public static void task8(){
         System.out.println("Задание 8");
